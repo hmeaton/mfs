@@ -106,7 +106,7 @@ def service_edit(request, pk):
 
 @login_required
 def service_delete(request, pk):
-    service = get_object_or_404(Product, pk=pk)
+    service = get_object_or_404(Service, pk=pk)
     service.delete()
     return redirect('crm:service_list')
 
@@ -154,7 +154,7 @@ def product_edit(request, pk):
 
 @login_required
 def product_delete(request, pk):
-    product = get_object_or_404(Customer, pk=pk)
+    product = get_object_or_404(Product, pk=pk)
     product.delete()
     return redirect('crm:product_list')
 
